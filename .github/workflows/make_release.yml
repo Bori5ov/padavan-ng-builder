@@ -19,7 +19,7 @@ jobs:
       contents: write
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
       with:
         fetch-depth: 0
 
@@ -130,7 +130,7 @@ jobs:
         fi
 
     - name: Create GitHub Release
-      uses: softprops/action-gh-release@v3
+      uses: softprops/action-gh-release@v4
       with:
         tag_name: release-${{ env.BUILD_TIMESTAMP }}
         name: Firmware 3.4.${{ env.FIRMWARE_ROOTFS_VER }}-${{ env.FIRMWARE_BUILDS_VER }}-${{ env.FIRMWARE_BUILDS_REV }}
@@ -138,5 +138,5 @@ jobs:
         draft: false
         prerelease: false
         body: |
-          Padavan firmware version 3.4.${{ env.FIRMWARE_ROOTFS_VER }}-${{ env.FIRMWARE_BUILDS_VER }}-${{ env.FIRMWARE_BUILDS_REV }}
+          Padawan firmware version 3.4.${{ env.FIRMWARE_ROOTFS_VER }}-${{ env.FIRMWARE_BUILDS_VER }}-${{ env.FIRMWARE_BUILDS_REV }}
           Repository used: ${{ env.PADAVAN_REPO }}
