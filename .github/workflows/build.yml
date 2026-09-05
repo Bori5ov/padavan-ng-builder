@@ -132,7 +132,7 @@ jobs:
       files: ${{ steps.collect.outputs.files }}
     steps:
       - name: Download releases
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: all_firmware_releases
           path: release
@@ -153,7 +153,7 @@ jobs:
 
     steps:
       - name: Download releases
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: all_firmware_releases
           path: release
