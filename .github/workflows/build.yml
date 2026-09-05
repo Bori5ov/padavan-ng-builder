@@ -16,7 +16,7 @@ jobs:
         shell: bash
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
     - name: Set up build tools
       run: |
@@ -118,7 +118,7 @@ jobs:
         fi
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v7
+      uses: actions/upload-artifact@v8
       with:
         name: all_firmware_releases
         retention-days: 7
@@ -159,7 +159,7 @@ jobs:
           path: release
 
       - name: Upload artifact ${{ matrix.file }}
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v8
         with:
           name: ${{ matrix.file }}
           path: release/${{ matrix.file }}
