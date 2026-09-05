@@ -19,7 +19,7 @@ jobs:
       contents: write
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
       with:
         fetch-depth: 0
 
@@ -87,7 +87,7 @@ jobs:
         fi
 
     - name: Create GitHub Release
-      uses: softprops/action-gh-release@v3
+      uses: softprops/action-gh-release@v4
       with:
         tag_name: release-${{ env.BUILD_TIMESTAMP }}
         name: Toolchain ${{ env.LIBC_DIR }}
